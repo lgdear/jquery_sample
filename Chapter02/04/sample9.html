@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+ Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<title>sample9</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function(){
+	$(":input").focus(function(){
+		$(this).css("background","#DFEEFF");
+	}).blur(function(){
+		$(this).css("background","");
+	});
+});
+		</script>
+	</head>
+	<body>
+		<dl>
+			<dt> 이름<em>(필수)</em></dt>
+			<dd><input type="text" name="name" /></dd>
+			<dt> 연령</dt>
+			<dd>
+				<select name="age">
+					<option> 선택해주세요</option>
+					<option value="10대">10대</option>
+					<option value="20대">20대</option>
+					<option value="30대">30대</option>
+					<option value="40대이상">40대이상</option>
+				</select>
+			</dd>
+			<dt> 코멘트</dt>
+			<dd>
+				<textarea name="comment"></textarea>
+			</dd>
+		</dl>
+		<input type="reset" value="리셋" />
+		<input type="submit" value="전송" />
+		<button>확인</button>
+	</body>
+</html>
